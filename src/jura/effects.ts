@@ -1,3 +1,4 @@
+export function initJura() {
 
 document.documentElement.style.scrollBehavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -259,3 +260,5 @@ mItems.forEach(btn=>{
   }
   draw();
 })();
+
+}
