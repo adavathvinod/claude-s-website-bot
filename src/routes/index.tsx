@@ -1,24 +1,41 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
+import markup from "@/jura/markup.html?raw";
+import { initJura } from "@/jura/effects.js";
+import { JuraChat } from "@/components/JuraChat";
+import "@/jura/jura.css";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "JURA Bio — Scaling Frontier AI In Vitro" },
+      {
+        name: "description",
+        content:
+          "JURA Bio builds frontier AI models that design, synthesize and screen therapeutics in the lab — generating proprietary functional data no public dataset can match.",
+      },
+      { property: "og:title", content: "JURA Bio — Scaling Frontier AI In Vitro" },
+      {
+        property: "og:description",
+        content:
+          "Sovereign AI models trained on proprietary functional data across antibodies, TCR mimics, peptides, T-cell engagers and enzymes.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  useEffect(() => {
+    initJura();
+  }, []);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="jura-page">
+      <div dangerouslySetInnerHTML={{ __html: markup }} />
+      <JuraChat />
     </div>
   );
 }
