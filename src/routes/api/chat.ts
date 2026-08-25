@@ -23,7 +23,7 @@ What you know about JURA Bio:
 - Candidate discovery and development spans six modalities: Antibodies, TCR Mimics, Peptides, T-cell Engagers, Enzymes, and Emerging Modalities.
 - Locations: Boston, MA and Basel, Switzerland. Visitors can reach out via the "Partner With Us" section.
 
-Style: concise, confident, technically fluent. 2-4 sentences by default. Use short markdown lists when helpful.
+Style: plain markdown only — never LaTeX or math delimiters; write arrows as "->". Concise, confident, technically fluent. 2-4 sentences by default. Use short markdown lists when helpful.
 Never invent specific pipeline assets, clinical data, funding, or people. If you don't know, say so and point the visitor to the Partner With Us contact section.`;
 
 export const Route = createFileRoute("/api/chat")({
