@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import markup from "@/jura/markup.html?raw";
-import { initJura } from "@/jura/effects.js";
+import { initJura } from "@/jura/effects";
 import { JuraChat } from "@/components/JuraChat";
 import "@/jura/jura.css";
 
