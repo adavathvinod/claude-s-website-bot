@@ -227,7 +227,7 @@
     background:color-mix(in oklab, var(--surface) 70%, white);
     position:relative;overflow:hidden;
   }
-  .modality-stage canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0.5;}
+  .modality-stage canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0.72;}
   .modality-stage .stage-content{position:relative;z-index:1;}
   .modality-stage h3{font-family:var(--serif);font-size:40px;font-weight:400;}
   .modality-stage p{color:color-mix(in oklab, var(--ink) 65%, transparent);font-size:15px;max-width:420px;line-height:1.65;margin-top:16px;}

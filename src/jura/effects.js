@@ -248,8 +248,8 @@ mItems.forEach(btn=>{
     ctx.clearRect(0,0,w,h);
     strands.forEach((s,i)=>{
       ctx.beginPath();
-      ctx.strokeStyle = i%2===0 ? 'rgba(111,233,214,0.18)' : 'rgba(144,137,240,0.16)';
-      ctx.lineWidth = 1;
+      ctx.strokeStyle = i%2===0 ? 'rgba(14,116,255,0.58)' : 'rgba(0,166,255,0.46)';
+      ctx.lineWidth = 1.35;
       for(let x=0;x<=w;x+=8){
         const y = h*0.5 + Math.sin((x*0.02)+t*0.01+s.phase) * (30+s.offset*0.3) - 60 + i*30;
         if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
